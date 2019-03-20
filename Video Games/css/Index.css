@@ -1,0 +1,58 @@
+@font-face {
+  font-family: Pixel;
+  src: url(../Fonts/munro.ttf);
+}
+
+body, html {
+  height: 100%;
+}
+
+.parallax{ 
+  /* The image used */
+  background-image: url("../img/ps2.jpg");
+  opacity: 0.5;
+  /* Text Style */
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  
+
+  /* Full height */
+  height: 50vh; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: Pixel;
+  font-size: 4vw;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
